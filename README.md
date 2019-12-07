@@ -21,6 +21,7 @@ Our goals:
 - DRY
 - Self-documenting code
 - Comments
+- Functional programming
 ### Class
 - OOP
 - SOLID
@@ -36,8 +37,5 @@ Our goals:
 - Integration testing
 - Design for testability
 - TDD
-
-
-  
   
 We will not be discussing architecture because it is a different topic altogether.
