@@ -16,7 +16,7 @@ Our goals:
 
 ## How to get started
 You can start right now!  
-First check our [Kanban Board](board).  
+First check our [Kanban Board](https://github.com/Realm-of-Everlasting-Code/C-Sharp/projects/1).  
 Make yourself comfortable with the board, so if you like or don't the issues, discuss them. 
 Feel free to create an issue, clone this repository, make changes and specify a problem, give example and implement a solution.  
 You don't need to be an amazing developer to start working on this project. 
