@@ -41,7 +41,10 @@ Our goals:
 We will not be discussing architecture because it is a different topic altogether.
 
 ## How to get started
-You can start right now! Create an issue, clone this repository, make changes and specify a problem, give example and implement a solution.w
+You can start right now!  
+First check our [Kanban Board](board).  
+Make yourself comfortable with the board, so if you like or don't the issues, discuss them. 
+Feel free to create an issue, clone this repository, make changes and specify a problem, give example and implement a solution.  
 You don't need to be an amazing developer to start working on this project. 
 What matters, is that you are willing to learn and share your learning with others. 
 Document problems you have faced or know and share your solution, supplemented by other people ideas.  
