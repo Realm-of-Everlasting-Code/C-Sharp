@@ -48,4 +48,4 @@ Feel free to create an issue, clone this repository, make changes and specify a 
 You don't need to be an amazing developer to start working on this project. 
 What matters, is that you are willing to learn and share your learning with others. 
 Document problems you have faced or know and share your solution, supplemented by other people ideas.  
-Full details on how to get started can be found [here](link).
+Full details on how to get started can be found in [starter's guide](link).
