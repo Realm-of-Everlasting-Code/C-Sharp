@@ -44,5 +44,5 @@ We will not be discussing architecture because it is a different topic altogethe
 You can start right now! Create an issue, clone this repository, make changes and specify a problem, give example and implement a solution.w
 You don't need to be an amazing developer to start working on this project. 
 What matters, is that you are willing to learn and share your learning with others. 
-Document problems you have faced or know and share your solution, supplemented by other people ideas.
-Full details on how to get started can be found here[here](link).
+Document problems you have faced or know and share your solution, supplemented by other people ideas.  
+Full details on how to get started can be found [here](link).
