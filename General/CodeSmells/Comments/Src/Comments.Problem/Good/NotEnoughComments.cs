@@ -11,36 +11,57 @@ namespace Comments.Problem.Good
     /// </summary>
     public class Sorting
     {
+        /// <summary>
+        /// Sorts a given list of numbers using merge sort algorithm.
+        /// Algorithm: split collection into 2 parts left or right from the middle.
+        /// Recursively repeat the step until there is nothing left to split.
+        /// Then merge both sides presuming that both of them are sorted.
+        /// </summary>
+        /// <param name="unsorted">Unsorted set of integers.</param>
+        /// <returns>Sorted list of integers</returns>
         public static List<int> MergeSort(List<int> unsorted)
         {
-            if (unsorted.Count <= 1)
-                return unsorted;
+            // Exit condition- stops going deeper.
+            var canSplit = unsorted.Count > 1;
+            if (!canSplit) return unsorted;
 
-            List<int> left = new List<int>();
-            List<int> right = new List<int>();
+            // Split collection into 2 parts left and right of the middle point.
+            var left = new List<int>();
+            var right = new List<int>();
 
-            int middle = unsorted.Count / 2;
-            for (int i = 0; i < middle; i++)
+            var middle = unsorted.Count / 2;
+            // Left side. Might be equal to right or +1.
+            for (var i = 0; i < middle; i++)
             {
                 left.Add(unsorted[i]);
             }
-            for (int i = middle; i < unsorted.Count; i++)
+            // Right side.
+            for (var i = middle; i < unsorted.Count; i++)
             {
                 right.Add(unsorted[i]);
             }
 
+            // Split unsorted sides until 1 item is left (create many branches).
             left = MergeSort(left);
             right = MergeSort(right);
+            // Merge the branches 1 depth at the time until result emerges.
             return Merge(left, right);
         }
 
+        /// <summary>
+        /// Merge left and right sides split in middle.
+        /// </summary>
+        /// <param name="left">Sorted list left of middle.</param>
+        /// <param name="right">Sorted list right of middle.</param>
+        /// <returns>Merged and sorted list of integers</returns>
         private static List<int> Merge(List<int> left, List<int> right)
         {
-            List<int> result = new List<int>();
+            var result = new List<int>();
 
+            // For every iteration, compare the first items of each side (first because both sides are already sorted) 
             while (left.Count > 0 || right.Count > 0)
             {
-                if (left.Count > 0 && right.Count > 0)
+                if (left.Any() && right.Any())
                 {
                     if (left.First() <= right.First())
                     {
@@ -53,12 +74,15 @@ namespace Comments.Problem.Good
                         right.Remove(right.First());
                     }
                 }
-                else if (left.Count > 0)
+                // To cover the case when one side has no more elements but the other one still has.
+                // Don't mix this with the previous note that one side might have +1 elements compared to other.
+                // Merge might have a scenario where all the big elements are on the left side or the right side.
+                else if (left.Any())
                 {
                     result.Add(left.First());
                     left.Remove(left.First());
                 }
-                else if (right.Count > 0)
+                else if (right.Any())
                 {
                     result.Add(right.First());
 

@@ -9,10 +9,10 @@ namespace Comments.Problem.Bad
     /// </summary>
     public class Salary
     {
-        public double Calculate(float main)
+        public decimal Calculate(decimal main)
         {
-            // coeficient * taxes - mandatory pay.
-            return 1 * 0.99 * main- 1;
+            // -TaxFree *Insurance * Income tax .
+            return 100 + (main- 100m) * 0.95m * 0.90m;
         }
     }
 }

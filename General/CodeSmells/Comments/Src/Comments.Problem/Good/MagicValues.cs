@@ -8,10 +8,12 @@ namespace Comments.Problem.Good
     /// </summary>
     public class Salary
     {
-        public double Calculate(float main)
+        public decimal Calculate(decimal main)
         {
-            // coeficient * multiplier * taxes - mandatory pay.
-            return 1 * 0.99 * main - 1;
+            const decimal taxFree = 100;
+            const decimal insurance = 0.95m;
+            const decimal incomeTax = 0.90m;
+            return taxFree + (main - taxFree) * insurance * incomeTax;
         }
     }
 }
