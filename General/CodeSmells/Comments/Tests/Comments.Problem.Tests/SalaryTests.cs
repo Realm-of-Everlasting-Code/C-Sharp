@@ -1,30 +1,34 @@
 ﻿using FluentAssertions;
 using Xunit;
-using bad= Comments.Problem.Bad;
-using good = Comments.Problem.Good;
 
 namespace Comments.Problem.Tests
 {
     public class SalaryTests
     {
-        [Fact]
-        public void Bad_Calculate_Salary_Should_Return_Expected()
-        {
-            var calculator = new bad.Salary();
-            
-            var salary = calculator.Calculate(100);
+        private const int untaxedSalary = 100;
 
-            salary.Should().Be(98);
+        [Theory]
+        [InlineData(untaxedSalary, untaxedSalary)]
+        [InlineData(101, 100.855)]
+        public void Bad_Calculate_Salary_Returns_Net(decimal bruto, decimal expectedNet)
+        {
+            var calculator = new Bad.MagicValues.Salary();
+            
+            var net = calculator.Calculate(bruto);
+
+            net.Should().Be(expectedNet);
         }
 
-        [Fact]
-        public void Good_Calculate_Salary_Should_Return_Expected()
+        [Theory]
+        [InlineData(untaxedSalary, untaxedSalary)]
+        [InlineData(101, 100.855)]
+        public void Good_Calculate_Salary_Returns_Net(decimal bruto, decimal expectedNet)
         {
-            var calculator = new good.Salary();
+            var calculator = new Good.MagicValues.Salary();
 
-            var salary = calculator.Calculate(100);
+            var net = calculator.Calculate(bruto);
 
-            salary.Should().Be(98);
+            net.Should().Be(expectedNet);
         }
     }
 }

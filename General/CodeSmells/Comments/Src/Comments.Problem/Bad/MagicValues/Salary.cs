@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Comments.Problem.Bad
+﻿namespace Comments.Problem.Bad.MagicValues
 {
     /// <summary>
     /// Problem: Sometimes we use magic values and comments to explain them.

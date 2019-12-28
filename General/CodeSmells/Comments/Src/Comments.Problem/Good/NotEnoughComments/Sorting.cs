@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Comments.Problem.Good
+namespace Comments.Problem.Good.NotEnoughComments
 {
     /// <summary>
-    /// Solution to <see cref="Bad.Sorting"/>
+    /// Solution to <see cref="Bad.NotEnoughComments.Sorting"/>
     /// In algorithms or other complex functions, splitting code made not make as much sense.
     /// It's really hard to express yourself with self documenting code when implementing algorithms.
     /// In those cases code is not enough and a comment is needed to explain the logic better.
