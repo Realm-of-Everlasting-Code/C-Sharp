@@ -8,7 +8,17 @@ namespace Comments.Problem.TooManyComments.Good
         public DateTime Birthday { get; }
         // If objects can manage their own state without outside intervention- they should.
         // Person has enough info to calculate their own age.
-        public int Age => (int)(DateTime.Now - Birthday).TotalDays / 365;
+        public int Age
+        {
+            get
+            {
+                // Includes leap years.
+                const float averageYearDays = 365.25f;
+                var ageInYears = (DateTime.Now - Birthday).TotalDays / averageYearDays;
+
+                return (int)Math.Floor(ageInYears);
+            }
+        } 
         public string Address { get; }
 
         public Person(string name, DateTime birthday, string address)

@@ -36,7 +36,9 @@ namespace Comments.Problem.TooManyComments.Bad
 
                 // Can drink alcohol?
                 Console.WriteLine("Checking data...");
-                if ((DateTime.Now - personBday).TotalDays / 365 >= 18)
+                // Includes leap years.
+                const float averageYearDays = 365.25f;
+                if ((DateTime.Now - personBday).TotalDays / averageYearDays >= 18)
                 {
                     // Send booze
                     Console.WriteLine($"Person {personName} can drink booze.");

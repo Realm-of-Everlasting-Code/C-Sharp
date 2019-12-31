@@ -1,6 +1,8 @@
 ﻿namespace Comments.Problem.TooManyComments.Good
 {
-    // We work with orders and people, so we might as well make concepts for each.
+    /// <summary>
+    /// We work with orders and people, so we might as well make concepts for each.
+    /// </summary>
     public class Order
     {
         public string Name { get; }
