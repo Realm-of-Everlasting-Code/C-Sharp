@@ -59,7 +59,7 @@ namespace Comments.Problem.NotEnoughComments.Good
             var result = new List<int>();
 
             // For every iteration, compare the first items of each side (first because both sides are already sorted) 
-            while (left.Count > 0 || right.Count > 0)
+            while (left.Any() || right.Any())
             {
                 if (left.Any() && right.Any())
                 {

@@ -6,12 +6,12 @@
     /// </summary>
     public class Salary
     {
-        public decimal Calculate(decimal main)
+        public decimal CalculateNet(decimal bruto)
         {
             const decimal taxFree = 100;
             const decimal insurance = 0.95m;
             const decimal incomeTax = 0.90m;
-            return taxFree + (main - taxFree) * insurance * incomeTax;
+            return taxFree + (bruto - taxFree) * insurance * incomeTax;
         }
     }
 }

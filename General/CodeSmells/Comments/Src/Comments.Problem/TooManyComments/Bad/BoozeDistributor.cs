@@ -12,7 +12,7 @@ namespace Comments.Problem.TooManyComments.Bad
         
         // Order status can be either unchedked, sent and canceled.
         // Default status is uncheked.
-        public IDictionary<string, string> LastBatchStatuses { get; } = new Dictionary<string, string>();
+        public IDictionary<string, string> LastOrdersBatch { get; } = new Dictionary<string, string>();
 
         // Distributes booze
         public void Distribute()
@@ -32,7 +32,7 @@ namespace Comments.Problem.TooManyComments.Bad
                 var personBday = DateTime.Parse(orderParts[4]);
                 var personAddress = orderParts[5];
 
-                LastBatchStatuses.Add(orderName, "Unchecked");
+                LastOrdersBatch.Add(orderName, "Unchecked");
 
                 // Can drink alcohol?
                 Console.WriteLine("Checking data...");
@@ -45,7 +45,7 @@ namespace Comments.Problem.TooManyComments.Bad
                     // Newline
                     Console.WriteLine();
 
-                    LastBatchStatuses[orderName] = "Sent";
+                    LastOrdersBatch[orderName] = "Sent";
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace Comments.Problem.TooManyComments.Bad
                     // Newline
                     Console.WriteLine();
 
-                    LastBatchStatuses[orderName] = "Canceled";
+                    LastOrdersBatch[orderName] = "Canceled";
                 }
             }
         }

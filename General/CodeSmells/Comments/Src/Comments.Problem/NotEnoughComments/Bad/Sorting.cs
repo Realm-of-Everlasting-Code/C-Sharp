@@ -10,18 +10,17 @@ namespace Comments.Problem.NotEnoughComments.Bad
     {
         public static List<int> MergeSort(List<int> unsorted)
         {
-            if (unsorted.Count <= 1)
-                return unsorted;
+            if (unsorted.Count <= 1) return unsorted;
 
-            List<int> left = new List<int>();
-            List<int> right = new List<int>();
+            var left = new List<int>();
+            var right = new List<int>();
 
-            int middle = unsorted.Count / 2;
-            for (int i = 0; i < middle; i++)
+            var middle = unsorted.Count / 2;
+            for (var i = 0; i < middle; i++)
             {
                 left.Add(unsorted[i]);
             }
-            for (int i = middle; i < unsorted.Count; i++)
+            for (var i = middle; i < unsorted.Count; i++)
             {
                 right.Add(unsorted[i]);
             }
@@ -33,11 +32,11 @@ namespace Comments.Problem.NotEnoughComments.Bad
 
         private static List<int> Merge(List<int> left, List<int> right)
         {
-            List<int> result = new List<int>();
+            var result = new List<int>();
 
-            while (left.Count > 0 || right.Count > 0)
+            while (left.Any() || right.Any())
             {
-                if (left.Count > 0 && right.Count > 0)
+                if (left.Any() && right.Any())
                 {
                     if (left.First() <= right.First())
                     {
@@ -50,15 +49,14 @@ namespace Comments.Problem.NotEnoughComments.Bad
                         right.Remove(right.First());
                     }
                 }
-                else if (left.Count > 0)
+                else if (left.Any())
                 {
                     result.Add(left.First());
                     left.Remove(left.First());
                 }
-                else if (right.Count > 0)
+                else if (right.Any())
                 {
                     result.Add(right.First());
-
                     right.Remove(right.First());
                 }
             }

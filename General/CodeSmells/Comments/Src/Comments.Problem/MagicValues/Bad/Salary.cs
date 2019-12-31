@@ -5,10 +5,10 @@
     /// </summary>
     public class Salary
     {
-        public decimal Calculate(decimal main)
+        public decimal CalculateNet(decimal bruto)
         {
             // -TaxFree *Insurance * Income tax .
-            return 100 + (main- 100m) * 0.95m * 0.90m;
+            return 100 + (bruto - 100m) * 0.95m * 0.90m;
         }
     }
 }

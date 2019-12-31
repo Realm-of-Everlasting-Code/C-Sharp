@@ -15,7 +15,7 @@ namespace Comments.Problem.Tests
         {
             var calculator = new Salary();
             
-            var net = calculator.Calculate(bruto);
+            var net = calculator.CalculateNet(bruto);
 
             net.Should().Be(expectedNet);
         }
@@ -27,7 +27,7 @@ namespace Comments.Problem.Tests
         {
             var calculator = new MagicValues.Good.Salary();
 
-            var net = calculator.Calculate(bruto);
+            var net = calculator.CalculateNet(bruto);
 
             net.Should().Be(expectedNet);
         }

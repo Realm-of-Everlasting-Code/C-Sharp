@@ -28,7 +28,7 @@ namespace Comments.Problem.Tests
 
             distributor.Distribute();
 
-            var statuses = distributor.LastBatchStatuses.Values;
+            var statuses = distributor.LastOrdersBatch.Values;
             statuses.Count(s => s == "Canceled").Should().Be(1);
             statuses.Count(s => s == "Sent").Should().Be(2);
             statuses.Count(s => s == "Unchecked").Should().Be(0);
