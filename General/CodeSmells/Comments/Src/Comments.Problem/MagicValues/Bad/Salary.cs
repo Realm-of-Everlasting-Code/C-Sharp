@@ -1,4 +1,4 @@
-﻿namespace Comments.Problem.Bad.MagicValues
+﻿namespace Comments.Problem.MagicValues.Bad
 {
     /// <summary>
     /// Problem: Sometimes we use magic values and comments to explain them.

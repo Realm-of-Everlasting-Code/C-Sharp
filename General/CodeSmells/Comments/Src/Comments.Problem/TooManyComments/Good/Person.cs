@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comments.Problem.Good.TooManyComments
+namespace Comments.Problem.TooManyComments.Good
 {
     public class Person
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Comments.Problem.Bad.TooManyComments
+namespace Comments.Problem.TooManyComments.Bad
 {
     /// <summary>
     /// Problem: Enterprise code written with code blocks with comments rather than separated functions.

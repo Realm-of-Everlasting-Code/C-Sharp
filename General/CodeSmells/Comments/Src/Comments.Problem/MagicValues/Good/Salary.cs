@@ -1,7 +1,7 @@
-﻿namespace Comments.Problem.Good.MagicValues
+﻿namespace Comments.Problem.MagicValues.Good
 {
     /// <summary>
-    /// Solution to <see cref="Bad.MagicValues.Salary"/>
+    /// Solution to <see cref="Bad.Salary"/>
     /// Instead of magic numbers and comments prefer to use named constants.
     /// </summary>
     public class Salary

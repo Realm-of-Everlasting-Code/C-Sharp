@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Comments.Problem.Bad.NotEnoughComments
+namespace Comments.Problem.NotEnoughComments.Bad
 {
     /// <summary>
     /// Problem: Complex logic not explained in comments.

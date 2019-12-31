@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Comments.Problem.Good.TooManyComments;
+using Comments.Problem.TooManyComments.Good;
 using FluentAssertions;
 using Xunit;
 
@@ -11,7 +11,7 @@ namespace Comments.Problem.Tests
         [Fact]
         public void Good_Test()
         {
-            var distributor = new Good.TooManyComments.BoozeDistributor();
+            var distributor = new BoozeDistributor();
             
             distributor.Distribute();
 
@@ -24,7 +24,7 @@ namespace Comments.Problem.Tests
         [Fact]
         public void Bad_Test()
         {
-            var distributor = new Bad.TooManyComments.BoozeDistributor();
+            var distributor = new TooManyComments.Bad.BoozeDistributor();
 
             distributor.Distribute();
 

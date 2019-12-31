@@ -10,7 +10,7 @@ namespace Comments.Problem.Tests
         [MemberData(nameof(SortingInputAndResults))]
         public void Good_Unsorted_MergeSort_Returns_Sorted(List<int> unsorted, List<int> expectedSorted)
         {
-            var sorted = Good.NotEnoughComments.Sorting.MergeSort(unsorted);
+            var sorted = NotEnoughComments.Good.Sorting.MergeSort(unsorted);
             
             sorted.Should().BeEquivalentTo(expectedSorted);
         }
@@ -19,7 +19,7 @@ namespace Comments.Problem.Tests
         [MemberData(nameof(SortingInputAndResults))]
         public void Bad_Unsorted_MergeSort_Returns_Sorted(List<int> unsorted, List<int> expectedSorted)
         {
-            var sorted = Bad.NotEnoughComments.Sorting.MergeSort(unsorted);
+            var sorted = NotEnoughComments.Bad.Sorting.MergeSort(unsorted);
 
             sorted.Should().BeEquivalentTo(expectedSorted);
         }

@@ -1,4 +1,4 @@
-﻿namespace Comments.Problem.Good.TooManyComments
+﻿namespace Comments.Problem.TooManyComments.Good
 {
     // We work with orders and people, so we might as well make concepts for each.
     public class Order
