@@ -1,4 +1,4 @@
-﻿using Comments.Problem.MagicValues.Bad;
+﻿using Comments.Problem.Magic_Values.Bad;
 using FluentAssertions;
 using Xunit;
 
@@ -25,7 +25,7 @@ namespace Comments.Problem.Tests
         [InlineData(101, 100.855)]
         public void Good_Calculate_Salary_Returns_Net(decimal bruto, decimal expectedNet)
         {
-            var calculator = new MagicValues.Good.Salary();
+            var calculator = new Magic_Values.Good.Salary();
 
             var net = calculator.CalculateNet(bruto);
 
