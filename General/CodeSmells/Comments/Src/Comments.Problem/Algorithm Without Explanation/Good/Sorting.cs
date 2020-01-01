@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Comments.Problem.NotEnoughComments.Good
+namespace Comments.Problem.Algorithm_Without_Explanation.Good
 {
     /// <summary>
     /// Solution to <see cref="Bad.Sorting"/>

@@ -1,4 +1,4 @@
-﻿namespace Comments.Problem.MagicValues.Good
+﻿namespace Comments.Problem.Magic_Values.Good
 {
     /// <summary>
     /// Solution to <see cref="Bad.Salary"/>

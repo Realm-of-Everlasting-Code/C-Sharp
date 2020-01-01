@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Comments.Problem.TooManyComments.Good
+namespace Comments.Problem.Comments_Instead_of_SRP.Good
 {
     /// <summary>
     /// Problem: Enterprise code written with code blocks with comments rather than separated functions.

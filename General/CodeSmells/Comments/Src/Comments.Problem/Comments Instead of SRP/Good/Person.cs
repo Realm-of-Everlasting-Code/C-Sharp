@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comments.Problem.TooManyComments.Good
+namespace Comments.Problem.Comments_Instead_of_SRP.Good
 {
     public class Person
     {

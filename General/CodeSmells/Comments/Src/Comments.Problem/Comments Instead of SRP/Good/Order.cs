@@ -1,4 +1,4 @@
-﻿namespace Comments.Problem.TooManyComments.Good
+﻿namespace Comments.Problem.Comments_Instead_of_SRP.Good
 {
     /// <summary>
     /// We work with orders and people, so we might as well make concepts for each.

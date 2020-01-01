@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Comments.Problem.Comments_Instead_of_SRP.Good;
 using FluentAssertions;
 using Xunit;
