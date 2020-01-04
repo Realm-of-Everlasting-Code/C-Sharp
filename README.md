@@ -1,4 +1,5 @@
-# C-Sharp
+# C-Sharp  
+[![Build Status](https://dev.azure.com/almantusk/Realm%20of%20Everlasting%20Code-%20Csharp/_apis/build/status/Realm-of-Everlasting-Code.C-Sharp?branchName=master)](https://dev.azure.com/almantusk/Realm%20of%20Everlasting%20Code-%20Csharp/_build/latest?definitionId=4&branchName=master)
 ## The Problem
 Code changes, one framework replaces another but something remains or at least slowly evolves.
 Best practices, patterns, code organizing tips and tricks don't change as much. 
