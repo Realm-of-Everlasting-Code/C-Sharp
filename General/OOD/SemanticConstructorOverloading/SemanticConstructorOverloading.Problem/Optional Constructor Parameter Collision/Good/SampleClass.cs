@@ -9,24 +9,10 @@ namespace SemanticConstructorOverloading.Problem.Optional_Constructor_Parameter_
     /// </summary>
     public class SampleClass
     {
-        // Private property backing fields.
-        private string _stringValueA;
-        private string _stringValueB;
-
         // Public property assignments managed by constructor. In this use case, these will most
         // likely be used for some kind of object configuration option.
-        public string StringValueA
-        {
-            get { return _stringValueA; }
-            set { _stringValueA = value; }
-            // Note - we can do validation in the setter if we need to.
-        }
-        public string StringValueB
-        {
-            get { return _stringValueB; }
-            set { _stringValueB = value; }
-            // Note - we can do validation in the setter if we need to.
-        }
+        public string StringValueA { get; set; }
+        public string StringValueB { get; set; }
 
         /// <summary>
         /// When two parameters of the same type are OPTIONAL in a constructor, specifying them as 
@@ -39,12 +25,12 @@ namespace SemanticConstructorOverloading.Problem.Optional_Constructor_Parameter_
         /// <param name="parameterA"></param>
         /// <param name="parameterB"></param>
 
-#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+#nullable enable
         public SampleClass(string? parameterA, string? parameterB)
-#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+#nullable disable
         {
-            StringValueA = (parameterA == null) ? "Lukewarm" : parameterA;
-            StringValueB = (parameterB == null) ? "Computer" : parameterB;
+            StringValueA = parameterA ?? "Lukewarm";
+            StringValueB = parameterB ?? "Computer";
         }
         public override string ToString()
         {

@@ -7,7 +7,7 @@ using SemanticConstructorOverloading.Problem.Optional_Constructor_Parameter_Coll
 namespace SemanticConstructorOverloading.Problem.Tests
 {
 
-    public class Good_OptionalConstructorParameterCollision_Tests
+    public class GoodOptionalConstructorParameterCollisionTests
     {
         private readonly ReferenceClass defaultValues = new ReferenceClass("Lukewarm", "Computer");
         private readonly ReferenceClass AparamBdefault = new ReferenceClass("Hot", "Computer");

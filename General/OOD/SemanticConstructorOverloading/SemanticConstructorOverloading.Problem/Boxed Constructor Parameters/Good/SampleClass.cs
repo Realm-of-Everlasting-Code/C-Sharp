@@ -12,29 +12,11 @@ namespace SemanticConstructorOverloading.Problem.Boxed_Constructor_Parameters.Go
 
 
         /// <summary>
-        /// Private backing fields.
-        /// </summary>
-        private string _stringValueA;
-        private string _stringValueB;
-
-        /// <summary>
         /// Public property assignments managed by constructor. In this use case, these will most
         /// likely be used for some kind of object configuration option.
         /// </summary>
-        public string StringValueA
-        {
-            get { return _stringValueA; }
-            set { _stringValueA = value; }
-            // Note - we can do validation in the setter if we need to.
-        }
-
-        public string StringValueB
-        {
-            get { return _stringValueB; }
-            set { _stringValueB = value; }
-            // Note - we can do validation in the setter if we need to.
-        }
-
+        public string StringValueA { get; set; }
+        public string StringValueB { get; set; }
 
         /// <summary>
         /// With this approach we can explicitly specify a constructor signature for each combination
@@ -101,7 +83,9 @@ namespace SemanticConstructorOverloading.Problem.Boxed_Constructor_Parameters.Go
             foreach (var a in stringAOptions)
             {
                 if (value == a)
+                {
                     return true;
+                }
             }
             return false;
         }
@@ -129,7 +113,9 @@ namespace SemanticConstructorOverloading.Problem.Boxed_Constructor_Parameters.Go
             foreach (var b in stringBOptions)
             {
                 if (value == b)
+                {
                     return true;
+                }
             }
             return false;
         }

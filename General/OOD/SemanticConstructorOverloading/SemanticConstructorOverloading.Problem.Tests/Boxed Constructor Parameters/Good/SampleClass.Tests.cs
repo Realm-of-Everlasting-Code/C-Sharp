@@ -5,7 +5,7 @@ using SemanticConstructorOverloading.Problem.Boxed_Constructor_Parameters.Good;
 
 namespace SemanticConstructorOverloading.Problem.Tests
 {
-    public class Good_Boxed_String_Object_Parameters_Tests
+    public class GoodBoxedStringObjectParametersTests
     {
         private readonly ReferenceClass defaultValues = new ReferenceClass("Lukewarm","Computer");
         private readonly ReferenceClass AparamBdefault = new ReferenceClass("Hot", "Computer");

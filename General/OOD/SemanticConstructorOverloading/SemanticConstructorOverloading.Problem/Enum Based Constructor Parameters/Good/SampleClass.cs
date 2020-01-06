@@ -25,19 +25,8 @@ namespace SemanticConstructorOverloading.Problem.Enum_Based_Constructor_Paramete
     public class SampleClass
     {
 
-        private ClassEnums.AValues _aValue;
-        private ClassEnums.BValues _bValue;
-
-        public ClassEnums.AValues AValue
-        {
-            get { return _aValue; }
-            set { _aValue = value; }
-        }
-        public ClassEnums.BValues BValue
-        {
-            get { return _bValue; }
-            set { _bValue = value; }
-        }
+        public ClassEnums.AValues AValue { get; set; }
+        public ClassEnums.BValues BValue { get; set; }
 
         // Note - because the properties are enum typed, assigning the default for the enum picks up
         // the default member for the enum concerned. 

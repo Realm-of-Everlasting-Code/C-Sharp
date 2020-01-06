@@ -6,7 +6,7 @@ using SemanticConstructorOverloading.Problem.Enum_Based_Constructor_Parameters.G
 
 namespace SemanticConstructorOverloading.Problem.Tests
 {
-    public class Good_EnumBasedConstructorParameters_Tests
+    public class GoodEnumBasedConstructorParametersTests
     {
         private readonly ReferenceClass defaultValues = new ReferenceClass("Lukewarm","Computer");
         private readonly ReferenceClass AparamBdefault = new ReferenceClass("Hot", "Computer");
