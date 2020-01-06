@@ -1,5 +1,6 @@
 # C-Sharp  
 [![Build Status](https://dev.azure.com/almantusk/Realm%20of%20Everlasting%20Code-%20Csharp/_apis/build/status/Realm-of-Everlasting-Code.C-Sharp?branchName=master)](https://dev.azure.com/almantusk/Realm%20of%20Everlasting%20Code-%20Csharp/_build/latest?definitionId=4&branchName=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6d454fb1f0094c41abad5f2138b0b93b)](https://www.codacy.com/gh/Realm-of-Everlasting-Code/C-Sharp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Realm-of-Everlasting-Code/C-Sharp&amp;utm_campaign=Badge_Grade)  
 ## The Problem
 Code changes, one framework replaces another but something remains or at least slowly evolves.
 Best practices, patterns, code organizing tips and tricks don't change as much. 
