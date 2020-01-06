@@ -1,4 +1,5 @@
-# C-Sharp
+# C-Sharp  
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6d454fb1f0094c41abad5f2138b0b93b)](https://www.codacy.com/gh/Realm-of-Everlasting-Code/C-Sharp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Realm-of-Everlasting-Code/C-Sharp&amp;utm_campaign=Badge_Grade)  
 ## The Problem
 Code changes, one framework replaces another but something remains or at least slowly evolves.
 Best practices, patterns, code organizing tips and tricks don't change as much. 
