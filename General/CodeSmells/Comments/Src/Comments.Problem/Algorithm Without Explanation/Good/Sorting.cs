@@ -53,10 +53,10 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
             var result = new List<int>();
             
             var eitherSideHasElements = left.Any() || right.Any()
-            while (isEitherSideWithElements)
+            while (eitherSideHasElements)
             {
                 var bothSidesHaveElements = left.Any() && right.Any();
-                if (isBothSidesWithElements)
+                if (bothSidesHaveElements)
                 {
                     MergeFirstElement(left, right, result);
                 }
