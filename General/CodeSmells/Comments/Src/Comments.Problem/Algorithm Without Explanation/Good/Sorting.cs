@@ -45,12 +45,12 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
 
         private static void MergeFirstElement(List<int> left, List<int> right, List<int> result)
         {
-            var biggerHalf = left.First() <= right.First()
+            var biggerHalf = left[0] <= right[0]
                              ? left
                              : right;
 
-            result.Add(biggerHalf.First());
-            biggerHalf.Remove(biggerHalf.First());
+            result.Add(biggerHalf[0]);
+            biggerHalf.Remove(biggerHalf[0]);
         }
 
         private static void MergeRemainingElement(List<int> left, List<int> right, List<int> result)
@@ -59,8 +59,8 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
                                    ? right
                                    : left;
 
-            result.Add(halfWithElements.First());
-            halfWithElements.Remove(halfWithElements.First());
+            result.Add(halfWithElements[0]);
+            halfWithElements.Remove(halfWithElements[0]);
         }
 
         private static (List<int>, List<int>) SplitInHalf(List<int> numbers)
