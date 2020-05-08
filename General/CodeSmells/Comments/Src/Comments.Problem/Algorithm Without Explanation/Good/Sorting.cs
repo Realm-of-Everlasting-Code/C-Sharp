@@ -58,21 +58,11 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
         {
             var result = new List<int>();
 
-            // For every iteration, compare the first items of each side (first because both sides are already sorted) 
             while (left.Any() || right.Any())
             {
                 if (left.Any() && right.Any())
                 {
-                    if (left.First() <= right.First())
-                    {
-                        result.Add(left.First());
-                        left.Remove(left.First());
-                    }
-                    else
-                    {
-                        result.Add(right.First());
-                        right.Remove(right.First());
-                    }
+                    MergeFirstElement(left, right, result);
                 }
                 // To cover the case when one side has no more elements but the other one still has.
                 // Don't mix this with the previous note that one side might have +1 elements compared to other.
@@ -85,11 +75,20 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
                 else if (right.Any())
                 {
                     result.Add(right.First());
-
                     right.Remove(right.First());
                 }
             }
             return result;
+        }
+        
+        private static List<int> MergeFirstElement(List<int> left, List<int> right, List<int> result)
+        {
+           var biggerHalf =  left.First() <= right.First() 
+                                      ? left 
+                                      : right;
+                    
+                    result.Add(biggerHalf.First());
+                    biggerHalf.Remove(biggerHalf .First());
         }
     }
 }
