@@ -30,20 +30,25 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
             var eitherSideHasElements = left.Any() || right.Any();
             while (eitherSideHasElements)
             {
-                var bothSidesHaveElements = left.Any() && right.Any();
-                if (bothSidesHaveElements)
-                {
-                    MergeFirstElement(left, right, result);
-                }
-                else
-                {
-                    MergeRemainingElement(left, right, result);
-                }
+                MoveBiggerElementToResult(left, right, result);
             }
             return result;
         }
 
-        private static void MergeFirstElement(List<int> left, List<int> right, List<int> result)
+        private static void MoveBiggerElementToResult(List<int> left, List<int> right, List<int> result)
+        {
+            var bothSidesHaveElements = left.Any() && right.Any();
+            if (bothSidesHaveElements)
+            {
+                MoveFirstBiggerElementToResult(left, right, result);
+            }
+            else
+            {
+                MoveRemainingElementToResult(left, right, result);
+            }
+        }
+
+        private static void MoveFirstBiggerElementToResult(List<int> left, List<int> right, List<int> result)
         {
             var biggerHalf = left[0] <= right[0]
                              ? left
@@ -53,7 +58,7 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
             biggerHalf.Remove(biggerHalf[0]);
         }
 
-        private static void MergeRemainingElement(List<int> left, List<int> right, List<int> result)
+        private static void MoveRemainingElementToResult(List<int> left, List<int> right, List<int> result)
         {
             var halfWithElements = right.Any()
                                    ? right
