@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Comments.Problem.Algorithm_Without_Explanation.Good
@@ -27,8 +28,8 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
         {
             var result = new List<int>();
 
-            var eitherSideHasElements = left.Any() || right.Any();
-            while (eitherSideHasElements)
+            bool EitherSideHasElements() => left.Any() || right.Any();
+            while (EitherSideHasElements())
             {
                 MoveBiggerElementToResult(left, right, result);
             }
