@@ -48,40 +48,27 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
             return Merge(left, right);
         }
 
-        /// <summary>
-        /// Merge left and right sides split in middle.
-        /// </summary>
-        /// <param name="left">Sorted list left of middle.</param>
-        /// <param name="right">Sorted list right of middle.</param>
-        /// <returns>Merged and sorted list of integers</returns>
         private static List<int> Merge(List<int> left, List<int> right)
         {
             var result = new List<int>();
-
-            while (left.Any() || right.Any())
+            
+            var eitherSideHasElements = left.Any() || right.Any()
+            while (isEitherSideWithElements)
             {
-                if (left.Any() && right.Any())
+                var bothSidesHaveElements = left.Any() && right.Any();
+                if (isBothSidesWithElements)
                 {
                     MergeFirstElement(left, right, result);
                 }
-                // To cover the case when one side has no more elements but the other one still has.
-                // Don't mix this with the previous note that one side might have +1 elements compared to other.
-                // Merge might have a scenario where all the big elements are on the left side or the right side.
-                else if (left.Any())
+                else
                 {
-                    result.Add(left.First());
-                    left.Remove(left.First());
-                }
-                else if (right.Any())
-                {
-                    result.Add(right.First());
-                    right.Remove(right.First());
+                    MergeRemainingElement(left, right, result);
                 }
             }
             return result;
         }
         
-        private static List<int> MergeFirstElement(List<int> left, List<int> right, List<int> result)
+        private static void MergeFirstElement(List<int> left, List<int> right, List<int> result)
         {
            var biggerHalf =  left.First() <= right.First() 
                                       ? left 
@@ -89,6 +76,13 @@ namespace Comments.Problem.Algorithm_Without_Explanation.Good
                     
                     result.Add(biggerHalf.First());
                     biggerHalf.Remove(biggerHalf .First());
+        }
+        
+        private static void MergeRemainingElement(List<int> left, List<int> right, List<int> result)
+        {
+            var halfWithElements = right.Any() ? right : left;
+                    result.Add(halfWithElements.First());
+                    halfWithElements.Remove(halfWithElements.First());
         }
     }
 }
