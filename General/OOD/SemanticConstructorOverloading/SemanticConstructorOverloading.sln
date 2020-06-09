@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36391B74-8B43-494F-AF1F-EF118B41AA60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9AF28486-4323-42EC-80E1-3579ACB16DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticConstructorOverloading.Problem", "SemanticConstructorOverloading.Problem\SemanticConstructorOverloading.Problem.csproj", "{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticConstructorOverloading.Problem.Tests", "SemanticConstructorOverloading.Problem.Tests\SemanticConstructorOverloading.Problem.Tests.csproj", "{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10859A6F-04EA-4905-ABB0-6DC2CAB2E87A} = {36391B74-8B43-494F-AF1F-EF118B41AA60}
+		{96FDEB6B-E3E3-4F9B-B9DA-0AAFAAB14C62} = {9AF28486-4323-42EC-80E1-3579ACB16DE3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59FB93BD-022A-40DB-B56C-E26A9226CE8A}
+	EndGlobalSection
+EndGlobal
